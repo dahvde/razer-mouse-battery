@@ -7,6 +7,8 @@ import datetime
 
 class mouse:
     def __init__(self):
+        # Replace with your device name(s) https://github.com/openrazer/openrazer#mice
+        # NOTE: Only one device is supported right now. Some devices have multiple names
         self.mouse_names = [
             "Razer DeathAdder V3 Pro (Wireless)",
             "Razer DeathAdder V3 Pro (Wired)",
