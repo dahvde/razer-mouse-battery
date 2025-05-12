@@ -28,6 +28,8 @@ class mouse:
 
     def check_device(self):
         try:
+            print(self.device_manager.devices)
+            self.device_manager = DeviceManager()
             for device in self.device_manager.devices:
                 if device.name in self.mouse_names:
                     self.name = device.name
@@ -35,7 +37,9 @@ class mouse:
                     self.exists = True
                     self.is_charging = device.is_charging
                     self.device_found = True
-                    return
+                    if "(Wired)" in device.name:
+                        return
+            return
         except:
             pass
 
